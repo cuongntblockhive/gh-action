@@ -6,3 +6,4 @@ jobs:
     steps:
       - name: Print onformation
         run: echo "${{ toJSON(github) }}"
+        working-directory: basic/learn
