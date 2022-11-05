@@ -12,6 +12,7 @@ jobs:
           node-version: 18
       - name: Run Lint
         run: npm run lint
+        working-directory: action-session/exercise
   RunTest:
     needs: RunLint
     runs-on: ubuntu-latest
@@ -22,8 +23,9 @@ jobs:
         uses: actions/setup-node
         with:
           node-version: 18
-      - name: Run Lint
+      - name: Run Test
         run: npm run test
+        working-directory: action-session/exercise
   RunBuild:
     needs: RunTest
     runs-on: ubuntu-latest
@@ -34,6 +36,7 @@ jobs:
         uses: actions/setup-node
         with:
           node-version: 18
-      - name: Run Lint
+      - name: Run Build
         run: npm run build
+        working-directory: action-session/exercise
   
