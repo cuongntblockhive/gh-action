@@ -1,5 +1,5 @@
 name: Basic Le Output
-on: workflow_dispatch
+on: [push,workflow_dispatch]
 defaults:
   run:
     working-directory: basic/learn
