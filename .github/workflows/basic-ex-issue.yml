@@ -1,0 +1,13 @@
+name: Basic Ex Check Creted Issue
+on:
+  issues:
+    types:
+      - "opened"
+jobs:
+  CheckIssue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify
+        run: echo "Issues created with title ${{ github.event.issue.title }}"
+             echo "Issues created with body ${{ github.event.issue.body }}"
+  
