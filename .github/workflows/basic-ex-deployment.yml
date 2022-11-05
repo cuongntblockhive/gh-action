@@ -1,5 +1,5 @@
 name: Basic Ex Deployment
-on: push
+on: [push, workflow_dispatch]
 defaults:
   run:
     working-directory: basic/exercise
@@ -13,6 +13,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install package
+        run: npm ci
       - name: Run Lint
         run: npm run lint
   RunTest:
@@ -25,6 +27,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install package
+        run: npm ci
       - name: Run Test
         run: npm run test
   RunBuild:
@@ -37,6 +41,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install package
+        run: npm ci
       - name: Run Build
         run: npm run build
   
