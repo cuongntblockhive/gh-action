@@ -2,7 +2,7 @@ name: Basic Le Output
 on: workflow_dispatch
 defaults:
   run:
-    working-directory: basic/learn
+    working-directory: ./../basic/learn
 jobs:
   info:
     runs-on: ubuntu-latest
