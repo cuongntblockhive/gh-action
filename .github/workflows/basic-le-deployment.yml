@@ -1,4 +1,4 @@
-name: Run Deployment
+name: Basic Le Deployment
 on: [push, workflow_dispatch]
 defaults:
   run:

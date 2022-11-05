@@ -1,4 +1,4 @@
-name: Deployment Workflow
+name: Basic Ex Deployment
 on: push
 defaults:
   run:

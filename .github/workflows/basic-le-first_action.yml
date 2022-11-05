@@ -1,4 +1,4 @@
-name: First-workflow
+name: Basic Le First Action
 # Controls when the workflow will run
 # Allows you to run this workflow manually from the Actions tab
 on: workflow_dispatch

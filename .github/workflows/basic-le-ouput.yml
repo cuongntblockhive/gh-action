@@ -1,4 +1,4 @@
-name: Output information
+name: Basic Le Output
 on: workflow_dispatch
 defaults:
   run:
