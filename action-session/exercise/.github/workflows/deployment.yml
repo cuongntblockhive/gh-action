@@ -1,0 +1,39 @@
+name: Deployment Workflow
+on: push
+jobs:
+  RunLint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout
+      - name: Install NodeJS
+        uses: actions/setup-node
+        with:
+          node-version: 18
+      - name: Run Lint
+        run: npm run lint
+  RunTest:
+    needs: RunLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout
+      - name: Install NodeJS
+        uses: actions/setup-node
+        with:
+          node-version: 18
+      - name: Run Lint
+        run: npm run test
+  RunBuild:
+    needs: RunTest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout
+      - name: Install NodeJS
+        uses: actions/setup-node
+        with:
+          node-version: 18
+      - name: Run Lint
+        run: npm run build
+  
