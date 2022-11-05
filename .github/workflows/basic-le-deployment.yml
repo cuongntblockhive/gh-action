@@ -1,5 +1,8 @@
 name: Run Deployment
 on: [push, workflow_dispatch]
+defaults:
+  run:
+    working-directory: basic/learn
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,7 +17,6 @@ jobs:
         run: npm ci
       - name: Run test
         run: npm test
-        working-directory: basic/learn
   deployment:
     needs: test
     runs-on: ubuntu-latest
@@ -31,7 +33,6 @@ jobs:
         run: npm run build
       - name: Upload build code to server
         run: echo "Deployed code"
-        working-directory: basic/learn
 
         
 

@@ -1,9 +1,11 @@
 name: Output information
 on: workflow_dispatch
+defaults:
+  run:
+    working-directory: basic/learn
 jobs:
   info:
     runs-on: ubuntu-latest
     steps:
       - name: Print onformation
         run: echo "${{ toJSON(github) }}"
-        working-directory: /basic/learn
