@@ -10,7 +10,7 @@ on:
     branches:
       - "main"
     paths-ignore:
-      - "src/MainContent.jsx"
+      - "deep/learn/src/MainContent.jsx"
 defaults:
   run:
     working-directory: deep/learn
