@@ -1,4 +1,4 @@
-name: Events Demo 1
+name: Deep learn action
 on:
   pull_request:
     types:
