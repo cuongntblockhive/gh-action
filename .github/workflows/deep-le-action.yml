@@ -6,6 +6,11 @@ on:
       - "closed"
       - "reopened"
   workflow_dispatch:
+  push:
+    branches:
+      - "main"
+    paths-ignore:
+      - "src/MainContent.jsx"
 defaults:
   run:
     working-directory: deep/learn
