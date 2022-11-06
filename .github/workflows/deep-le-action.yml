@@ -1,4 +1,4 @@
-name: Deep learn action
+name: Deep Le action
 on:
   pull_request:
     types:
