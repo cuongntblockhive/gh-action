@@ -1,5 +1,6 @@
 name: Basic Ex Deployment
-on: [push, workflow_dispatch]
+# on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 defaults:
   run:
     working-directory: basic/exercise
